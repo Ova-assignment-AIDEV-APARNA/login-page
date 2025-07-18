@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 const Login = ({ onSwitch }) => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -24,7 +25,10 @@ const Login = ({ onSwitch }) => {
               <input type="checkbox" className="mr-2" />
               Remember 
             </label>
-            <a href="#" className="text-blue-600 hover:underline">Forgot password</a>
+     <Link to="/forgetpassword" className="text-blue-600 hover:underline">
+          Forgot password?
+        </Link>
+
           </div>
 
           <button

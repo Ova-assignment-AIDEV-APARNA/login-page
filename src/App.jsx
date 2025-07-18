@@ -1,19 +1,21 @@
-// src/App.jsx
-import React, { useState } from 'react';
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './login';
 import Signup from './signup';
+import ForgetPassword from './forgetandresetpw'; 
 
 function App() {
-  const [isLogin, setIsLogin] = useState(true);
-
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      {isLogin ? (
-        <Login onSwitch={() => setIsLogin(false)} />
-      ) : (
-        <Signup onSwitch={() => setIsLogin(true)} />
-      )}
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgetpassword" element={<ForgetPassword />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
