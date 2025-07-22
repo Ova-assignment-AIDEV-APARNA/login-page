@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgetpassword" element={<ForgetPassword />} />
         </Routes>
